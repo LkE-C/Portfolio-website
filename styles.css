@@ -47,6 +47,7 @@ ul{
 }
 
 #intro_wrapper{
+    padding-left: 5%;
     width: 80%;
     display: flex;
     justify-content: center;
@@ -154,28 +155,74 @@ body:has(.side-menu:checked) {
     height: 100vh;
 }
 
+
 #Contact{
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+a.email-button {
+    display: inline-block;
+    margin-top: 5vh;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--black); /* Button background color */
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Hover effect: lift up the button */
+a.email-button:hover {
+    transform: translateY(-4px); /* Lifts the button up */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Increases the shadow for a lifted effect */
 }
 
 #about{
     padding-top: 2.5vh;;
 }
+
 #name-h1{
     overflow: hidden; 
     border-right: .15em solid rgb(255, 255, 255);
     animation: blink 1s infinite, disappear  0.5s forwards 5s;
     font-weight: 1000;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 #welcome-h3{
     margin-top: 3vh;
 }
 
+.title-h1{
+    font-size: 3rem;
+    text-decoration: solid;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5vh;
+}
+
+.title-h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px; /* Adjust this value for spacing between the text and the underline */
+    width: 60%; /* Adjust this value for the underline length relative to the h1 */
+    height: 4px; /* Adjust the thickness of the underline */
+    background-color: var(--white); /* Adjust the underline color */
+    border-radius: 2px; /* Optional: gives the underline rounded corners */
+}
+
 .type-style{
     display: inline-block;
-
 }
 
 @keyframes blink {
@@ -222,6 +269,8 @@ body:has(.side-menu:checked) {
 }
 
 /* Responsiveness */
+
+
 @media (min-width: 768px) {
 
     .header{
@@ -250,6 +299,7 @@ body:has(.side-menu:checked) {
     }
     .menu a:hover{
         background-color: transparent;
+        transform: translateY(-4px); /* Lifts the button up */
     }
 
     .hamb{
@@ -258,10 +308,35 @@ body:has(.side-menu:checked) {
 
     #intro_wrapper{
         font-size: 1.5rem;
+    }
+
+    #name-h1{
+        font-size: 4rem;
+    }
+
+    .title-h1{
+        font-size: 4rem;
+    }
+
+    #Projects{
+        font-size: 1.5rem;
+    }
+    
+    #Contact{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    #intro_wrapper{
         width: 60%;
     }
 
     #name-h1{
-        font-size: 3rem;
+        font-size: 5rem;
+    }
+
+    .title-h1{
+        font-size: 5rem;
     }
 }
