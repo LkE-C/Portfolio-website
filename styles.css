@@ -36,8 +36,24 @@ ul{
 /* Header */
 .header{
     background-color: var(--primary);
-    position: sticky;
+    height: 10vh;
     top: 0;
+}
+
+.home-hero{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#intro_wrapper{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 5vh;
+    font-size: 1rem;
+    flex-grow : 1;
 }
 
 /* Logo */
@@ -134,29 +150,17 @@ body:has(.side-menu:checked) {
   overflow: hidden;
 }
 
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+#Projects{
+    height: 100vh;
 }
 
-.content{
-    padding-top: 25vh;
-    width:80%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+#Contact{
+    height: 100vh;
 }
 
-#intro_wrapper{
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 5vh;
-    font-size: 1rem;
-    width: max-content;
+#about{
+    padding-top: 2.5vh;;
 }
-
 #name-h1{
     overflow: hidden; 
     border-right: .15em solid rgb(255, 255, 255);
@@ -187,6 +191,34 @@ main{
 
 .cv {
     margin-left: 30%;
+}
+
+.scroll-indicator {
+    animation: bounce 2s infinite;
+}
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+   
+#scroll-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute; 
+    bottom: 2vh;; 
+    left: 0; 
+    width: 100%; 
+    text-align: center;
 }
 
 /* Responsiveness */
@@ -226,7 +258,7 @@ main{
 
     #intro_wrapper{
         font-size: 1.5rem;
-        flex-direction: row;
+        width: 60%;
     }
 
     #name-h1{
