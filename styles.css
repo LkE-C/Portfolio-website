@@ -36,6 +36,7 @@ ul{
 /* Header */
 .header{
     background-color: var(--primary);
+    position: sticky;
     height: 10vh;
     top: 0;
 }
@@ -127,7 +128,8 @@ ul{
 
 /* Toggle menu icon */
 .side-menu:checked ~ nav{
-    max-height: 80%;
+    z-index: 100;
+    max-height: 95%;
     max-width: 88%;
 }
 
@@ -155,6 +157,13 @@ body:has(.side-menu:checked) {
     height: 100vh;
 }
 
+#Projects{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 
 #Contact{
     height: 100vh;
@@ -164,7 +173,11 @@ body:has(.side-menu:checked) {
     flex-direction: column;
 }
 
-a.email-button {
+#Contact p{
+    text-align: center;
+}
+
+a.button {
     display: inline-block;
     margin-top: 5vh;
     padding: 10px 20px;
@@ -180,7 +193,7 @@ a.email-button {
 }
 
 /* Hover effect: lift up the button */
-a.email-button:hover {
+a.button:hover {
     transform: translateY(-4px); /* Lifts the button up */
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Increases the shadow for a lifted effect */
 }
@@ -217,7 +230,7 @@ a.email-button:hover {
     bottom: -10px; /* Adjust this value for spacing between the text and the underline */
     width: 60%; /* Adjust this value for the underline length relative to the h1 */
     height: 4px; /* Adjust the thickness of the underline */
-    background-color: var(--white); /* Adjust the underline color */
+    background-color: var(--black); /* Adjust the underline color */
     border-radius: 2px; /* Optional: gives the underline rounded corners */
 }
 
@@ -266,6 +279,7 @@ a.email-button:hover {
     left: 0; 
     width: 100%; 
     text-align: center;
+    z-index: -1;
 }
 
 /* Responsiveness */
@@ -297,6 +311,7 @@ a.email-button:hover {
     .menu li{
         float: left;
     }
+
     .menu a:hover{
         background-color: transparent;
         transform: translateY(-4px); /* Lifts the button up */
@@ -309,6 +324,11 @@ a.email-button:hover {
     #intro_wrapper{
         font-size: 1.5rem;
     }
+
+    a{
+        font-size: 1.5rem;
+    }
+
 
     #name-h1{
         font-size: 4rem;
