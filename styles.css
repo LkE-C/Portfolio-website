@@ -185,15 +185,19 @@ main{
     }
 }
 
-
 .cv {
     margin-left: 30%;
 }
 
-
-
 /* Responsiveness */
 @media (min-width: 768px) {
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .nav{
         max-height: none;
         top: 0;
@@ -203,6 +207,12 @@ main{
         background-color: transparent;
         height: auto;
     }
+
+    .menu{
+        display: flex;
+        align-items: center;
+    }
+
     .menu li{
         float: left;
     }
