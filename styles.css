@@ -39,12 +39,14 @@ ul{
     position: sticky;
     height: 10vh;
     top: 0;
+    z-index: 10;
 }
 
 .home-hero{
     height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative; /* Create a common stacking context */
 }
 
 #intro_wrapper{
@@ -85,6 +87,8 @@ ul{
 .nav{
     max-height: 0;
     transition: max-height .5s ease-out;
+    z-index: 10;
+    position: fixed;
 }
 
 
@@ -128,10 +132,16 @@ ul{
 
 /* Toggle menu icon */
 .side-menu:checked ~ nav{
-    z-index: 100;
     max-height: 95%;
     max-width: 88%;
+    z-index: 10;
 }
+
+.side-menu:checked ~ #scroll-button{
+    z-index: -1;
+}
+
+
 
 .side-menu:not(checked) ~ nav{
     max-width: 88%;
@@ -279,8 +289,10 @@ a.button:hover {
     left: 0; 
     width: 100%; 
     text-align: center;
-    z-index: -1;
+    z-index: 1;
 }
+
+
 
 /* Responsiveness */
 
