@@ -36,7 +36,6 @@ ul{
 /* Header */
 .header{
     background-color: var(--primary);
-    position: sticky;
     height: 10vh;
     top: 0;
     z-index: 10;
@@ -51,7 +50,7 @@ ul{
 
 #intro_wrapper{
     padding-left: 5%;
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -75,6 +74,9 @@ ul{
     position: fixed;
     background-color: var(--primary);
     overflow: hidden;
+    max-height: 0;
+    transition: max-height .5s ease-out;
+    z-index: 10;
 }
 .menu a{
     display: block;
@@ -83,12 +85,6 @@ ul{
 }
 .menu a:hover{
     background-color: var(--black);
-}
-.nav{
-    max-height: 0;
-    transition: max-height .5s ease-out;
-    z-index: 10;
-    position: fixed;
 }
 
 
@@ -163,6 +159,7 @@ body:has(.side-menu:checked) {
   overflow: hidden;
 }
 
+
 #Projects{
     height: 100vh;
 }
@@ -217,7 +214,7 @@ a.button:hover {
     border-right: .15em solid rgb(255, 255, 255);
     animation: blink 1s infinite, disappear  0.5s forwards 5s;
     font-weight: 1000;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 #welcome-h3{
@@ -295,7 +292,11 @@ a.button:hover {
 
 
 /* Responsiveness */
-
+@media (min-width: 514px) {
+    #name-h1{
+        font-size: 3rem;
+    }
+}
 
 @media (min-width: 768px) {
 
